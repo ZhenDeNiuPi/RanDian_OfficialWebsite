@@ -376,7 +376,7 @@ a:focus {
 		display: block;
 	}
 	.slide__title {
-		font-size: 3.25rem;
+		font-size: 2.7rem;
 		margin: 0 0 0.25rem;
 	}
 	.slide__subtitle {
@@ -413,7 +413,7 @@ a:focus {
 		font-size: 2rem;
 	}
 	.content__title {
-		font-size: 7vw;
+		font-size: 3.5vw;
 	}
 	.content__subtitle {
 		font-size: 1.15rem;
