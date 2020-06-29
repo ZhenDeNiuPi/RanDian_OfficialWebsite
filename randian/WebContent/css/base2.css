@@ -20,6 +20,8 @@ body {
 	background-color: var(--color-bg);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
 }
 
 
@@ -249,8 +251,9 @@ a:focus {
 
 .slide__title-wrap {
 	position: absolute;
-    left: -4.5rem;
-    top: 28rem;
+    /* left: -4.5rem; */
+    top: 50vh;
+	left: -18vw;
 }
 
 .slide__title,
@@ -283,7 +286,7 @@ a:focus {
 	width: 100%;
 	height: 100%;
 	padding: 10vh 5vw;
-	overflow: auto;
+	overflow: visible;
 }
 
 .content__item--current,
@@ -339,6 +342,8 @@ a:focus {
 
 .content__text {
 	font-size: 0.85rem;
+	word-wrap: break-word;
+	word-break: break-all;
 }
 
 .js .content__title,
