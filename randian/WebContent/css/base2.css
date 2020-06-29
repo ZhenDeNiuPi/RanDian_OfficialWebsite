@@ -13,15 +13,15 @@ body {
 	--color-deco: #141414;
 	--color-side: #353535;
 	font-family: Futura, "futura-pt", sans-serif;
-	/* min-height: 100vh; */
-	height:100%;
+	min-height: 100vh;
+	/* height:100%; */
 	color: #57585c;
 	color: var(--color-text);
 	background-color: var(--color-bg);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	padding-top: 5rem;
 }
+
 
 /* Page Loader */
 .js .loading::before {
@@ -99,7 +99,7 @@ a:focus {
 
 .slideshow {
 	position: relative;
-	overflow: hidden;
+	overflow: auto;
 	margin: 0;
 	height: 100vh;
 	width: 100%;
@@ -112,7 +112,7 @@ a:focus {
 }
 
 .slide {
-	width: 100%;
+	width: 260px;
 	display: flex;
 	pointer-events: none;
 	cursor: pointer;
@@ -146,7 +146,7 @@ a:focus {
 	align-self: center;
 	position: relative;
 	margin: -40px 0 0 0;
-	right: -20px;
+	right: 50px;
 }
 
 .nav {
@@ -164,8 +164,8 @@ a:focus {
 }
 
 .nav--next {
-	bottom: 1rem;
-	right: 1rem;
+	bottom: 4rem;
+	right: 0.2rem;
 }
 
 .icon--navarrow-next {
@@ -173,8 +173,8 @@ a:focus {
 }
 
 .nav--prev {
-	top: 1rem;
-	left: 1rem;
+	top: 4rem;
+	left: 0.2rem;
 }
 
 .icon--navarrow-prev {
@@ -231,7 +231,7 @@ a:focus {
 
 .slide__number {
 	display: block;
-	font-size: 2rem;
+	font-size: 1.2rem;
 	font-weight: bold;
 }
 
@@ -247,9 +247,28 @@ a:focus {
 	display: none;
 }
 
+.slide__title-wrap {
+	position: absolute;
+    left: -4.5rem;
+    top: 28rem;
+}
+
+.slide__title,
+.slide__subtitle{
+	display: block;
+}
+.slide__title {
+	font-size: 1.2rem;
+	margin: 0 0 0.25rem;
+}
+.slide__subtitle {
+	font-weight: normal;
+	margin: 0;
+	min-height: 50px;
+}
 .content {
 	position: fixed;
-	top: 10rem;
+	top: 0rem;
 	left: 0;
 	width: 100%;
 	height: calc(100% - 10rem);
