@@ -1,59 +1,21 @@
 const slideData = [
 {
   index: 0,
-  headline: '滴信后台用户管理',
+  headline: '网格布局-市场分析',
   button: 'Shop now',
-  src: 'images/dixin/1.png' },
+  src: 'images/yxwg/1.jpg' },
 
 {
   index: 1,
-  headline: '滴信后台活动管理',
+  headline: '终端管理-样机管理',
   button: 'Shop now',
-  src: 'images/dixin/2.png' },
+  src: 'images/yxwg/2.png' },
 
 {
   index: 2,
-  headline: '滴信后台捐赠管理',
+  headline: '全国门店信息显示',
   button: 'Shop now',
-  src: 'images/dixin/3.png' },
-
-{
-  index: 3,
-  headline: '滴信后台租房管理',
-  button: 'Shop now',
-  src: 'images/dixin/4.png' },
-
-{
-	index: 4,
-	headline: '滴信后台通知管理',
-	button: 'Shop now',
-	src: 'images/dixin/5.png' },
-
-{
-	index: 5,
-	headline: '滴信小程序首页',
-	button: 'Shop now',
-	src: 'images/dixin/6.png' },
-{
-	index: 6,
-	headline: '滴信小程序活动详情',
-	button: 'Shop now',
-	src: 'images/dixin/7.png' },
-{
-	index: 7,
-	headline: '滴信小程序大学生计划',
-	button: 'Shop now',
-	src: 'images/dixin/8.png' },
-{
-	index: 8,
-	headline: '滴信小程序个人中心',
-button: 'Shop now',
-src: 'images/dixin/9.png' },
-{
-	index: 9,
-	headline: '滴信小程序用户签到',
-	button: 'Shop now',
-	src: 'images/dixin/10.png' },
+  src: 'images/yxwg/3.jpg' }
   ];
 
 

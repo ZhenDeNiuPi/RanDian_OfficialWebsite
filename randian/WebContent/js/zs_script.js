@@ -3,47 +3,47 @@ const slideData = [
   index: 0,
   headline: '至上官网首页',
   button: 'Shop now',
-  src: 'images/zs/至上首页.png' },
+  src: 'images/zs/1.png' },
 
 {
   index: 1,
   headline: '至上官网菜单',
   button: 'Shop now',
-  src: 'images/zs/至上官网菜单.png' },
+  src: 'images/zs/2.png' },
 
 {
   index: 2,
   headline: '至上官网内部一角',
   button: 'Shop now',
-  src: 'images/zs/至上官网内部.png' },
+  src: 'images/zs/3.png' },
 
 {
   index: 3,
   headline: '至上后台管理',
   button: 'Shop now',
-  src: 'images/zs/至上后台管理.png' },
+  src: 'images/zs/4.png' },
 
 {
 	index: 4,
 	headline: '至上后台管理菜单',
 	button: 'Shop now',
-	src: 'images/zs/至上后台管理菜单.png' },
+	src: 'images/zs/5.png' },
 
 {
 	index: 5,
 	headline: '至上后台图文管理',
 	button: 'Shop now',
-	src: 'images/zs/至上图文管理.png' },
+	src: 'images/zs/6.png' },
 {
 	index: 6,
 	headline: '至上后台案例管理',
 	button: 'Shop now',
-	src: 'images/zs/至上案例管理.png' },
+	src: 'images/zs/7.png' },
 {
 	index: 7,
 	headline: '至上后台证书管理',
 	button: 'Shop now',
-	src: 'images/zs/至上证书管理.png' }
+	src: 'images/zs/8.png' }
   ];
 
 
