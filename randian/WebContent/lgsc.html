@@ -1,20 +1,66 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en"  class="no-js">
 <head>
 <meta charset="UTF-8">
 <title>React Slider w/ Hover Effect</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/reset.min.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="shortcut icon" href="../favicon.ico"> 
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<script src="js/modernizr.custom.js"></script>
 </head>
 <body>
 <!-- partial:index.partial.html -->
 
 <div id="app"></div>
+
+<div class="md-modal md-effect-11" id="modal">
+	<div class="md-content">
+		<h3>轮毂商城</h3>
+		<div>
+			<ul>
+				<li><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;轮毂商城是专注轮毂改装知识，提供案例，库存共享的电商平台，本平台给用户提供诸多改装案例，协助不同需求的用户寻找商品。为了降低用户成本，本平台采用“灵活配置”的开发方式，后台用户可以根据不同需求设置不同的展示方式、不同的分配模式，方便用户扩展，从而降低成本。</strong></li>
+				<li><strong></strong></li>
+				<li><strong>合作方:</strong>青岛海信网络科技</li>
+				<li><strong>开发时间:</strong>2018年3月</li>
+				<li><strong>开发周期:</strong>30天</li>
+			</ul>
+			<button class="md-close" onclick="hide()">继续</button>
+		</div>
+	</div>
+</div>
 <!-- partial -->
+<script src="js/jQuery.js"></script>
 <script src='js/react.production.min.js'></script>
 <script src='js/react-dom.production.min.js'></script>
 <script src='js/react-transition-group.min.js'></script>
 <script  src="js/lgsc_script.js"></script>
+
+		<script src="js/classie.js"></script>
+		<script src="js/modalEffects.js"></script>
+
+		<!-- for the blur effect -->
+		<!-- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill -->
+		<script>
+			// this is important for IEs
+			var polyfilter_scriptpath = '/js/';
+		</script>
+		<script src="js/cssParser.js"></script>
+		<script src="js/css-filters-polyfill.js"></script>
+		<script>
+		$("#modal").addClass("md-show");
+		function hide(){
+			$("#modal").removeClass("md-show");
+		}
+		//.slide--current
+		$(".slide").bind("click",function(){
+			var className = $(this).context.className;
+			if(className.indexOf("slide--current")>-1)
+			$("#modal").addClass("md-show");
+		});
+		</script>
 </body>
 </html>

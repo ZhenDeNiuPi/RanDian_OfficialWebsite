@@ -1,20 +1,66 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en"  class="no-js">
 <head>
 <meta charset="UTF-8">
 <title>React Slider w/ Hover Effect</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/reset.min.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="shortcut icon" href="../favicon.ico"> 
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<script src="js/modernizr.custom.js"></script>
 </head>
 <body>
 <!-- partial:index.partial.html -->
 
 <div id="app"></div>
+
+<div class="md-modal md-effect-11" id="modal">
+	<div class="md-content">
+		<h3>滴信慈善救助基金会项目</h3>
+		<div>
+			<ul>
+				<li><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;滴信小程序是山东滴信慈善救助基金会退出的一款为社会公益、救助提供便利的产品。可以在小程序中进行公益捐赠，大学生还可以申请租房补助，参与公益活动换取公益积分。后台管理系统则方便的将用户数据、产品运行情况一览无余的呈现给客户。</strong></li>
+				<li><strong></strong></li>
+				<li><strong>合作方:</strong>山东滴信慈善救助基金会</li>
+				<li><strong>开发时间:</strong>2019年12月</li>
+				<li><strong>开发周期:</strong>60天</li>
+			</ul>
+			<button class="md-close" onclick="hide()">继续</button>
+		</div>
+	</div>
+</div>
 <!-- partial -->
+<script src="js/jQuery.js"></script>
 <script src='js/react.production.min.js'></script>
 <script src='js/react-dom.production.min.js'></script>
 <script src='js/react-transition-group.min.js'></script>
 <script  src="js/dixin_script.js"></script>
+
+		<script src="js/classie.js"></script>
+		<script src="js/modalEffects.js"></script>
+
+		<!-- for the blur effect -->
+		<!-- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill -->
+		<script>
+			// this is important for IEs
+			var polyfilter_scriptpath = '/js/';
+		</script>
+		<script src="js/cssParser.js"></script>
+		<script src="js/css-filters-polyfill.js"></script>
+		<script>
+		$("#modal").addClass("md-show");
+		function hide(){
+			$("#modal").removeClass("md-show");
+		}
+		//.slide--current
+		$(".slide").bind("click",function(){
+			var className = $(this).context.className;
+			if(className.indexOf("slide--current")>-1)
+			$("#modal").addClass("md-show");
+		});
+		</script>
 </body>
 </html>

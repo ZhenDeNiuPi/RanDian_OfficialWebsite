@@ -1,20 +1,66 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en"  class="no-js">
 <head>
 <meta charset="UTF-8">
 <title>React Slider w/ Hover Effect</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/reset.min.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="shortcut icon" href="../favicon.ico"> 
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<script src="js/modernizr.custom.js"></script>
 </head>
 <body>
 <!-- partial:index.partial.html -->
 
 <div id="app"></div>
+
+<div class="md-modal md-effect-11" id="modal">
+	<div class="md-content">
+		<h3>海尔聚商汇电子商务平台</h3>
+		<div>
+			<ul>
+				<li><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;该平台是与大连华鞍自动化系统有限公司合作为海尔开发的专业商家直销服务平台。让商家在平台上能够找到优质经销商，并低成本的实现交易和渠道管理，让经销商与原厂直接做生意，拿到一手产品，没有中间差价。汇商提供物流，服务，信息和营销全流程支持。帮助客户低成本采购，高质量服务和有利润的将产品销售到用户端。让厂家和经销商无后顾之忧地做生意，实现可持续经营。该平台提供零售，批发一体化服务，拥有线上物流，库存，记账，抢单等各大模块支撑，大量使用分布式，大数据等当前流行技术，为全国用户提供支持。特色功能：商家可以通过TV，手机等实现线上的虚拟商品体验，使商家无需较大店面即可开店，无需压货。</strong></li>
+				<li><strong></strong></li>
+				<li><strong>合作方:</strong>青岛海尔网络科技</li>
+				<li><strong>开发时间:</strong>2018年5月</li>
+				<li><strong>开发周期:</strong>180天</li>
+			</ul>
+			<button class="md-close" onclick="hide()">继续</button>
+		</div>
+	</div>
+</div>
 <!-- partial -->
+<script src="js/jQuery.js"></script>
 <script src='js/react.production.min.js'></script>
 <script src='js/react-dom.production.min.js'></script>
 <script src='js/react-transition-group.min.js'></script>
 <script  src="js/jsh_script.js"></script>
+
+		<script src="js/classie.js"></script>
+		<script src="js/modalEffects.js"></script>
+
+		<!-- for the blur effect -->
+		<!-- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill -->
+		<script>
+			// this is important for IEs
+			var polyfilter_scriptpath = '/js/';
+		</script>
+		<script src="js/cssParser.js"></script>
+		<script src="js/css-filters-polyfill.js"></script>
+		<script>
+		$("#modal").addClass("md-show");
+		function hide(){
+			$("#modal").removeClass("md-show");
+		}
+		//.slide--current
+		$(".slide").bind("click",function(){
+			var className = $(this).context.className;
+			if(className.indexOf("slide--current")>-1)
+			$("#modal").addClass("md-show");
+		});
+		</script>
 </body>
 </html>
