@@ -68,8 +68,8 @@ perspective effects (not including the modals and the overlay).
 
 /* Content styles */
 .md-content {
-	color: #A5281B;
-	background: #1d1f2f;
+	color: #333333;
+	background: #CCCC99;
 	position: relative;
 	border-radius: 3px;
 	margin: 0 auto;
@@ -79,7 +79,7 @@ perspective effects (not including the modals and the overlay).
 	margin: 0;
 	padding: 0.4em;
 	text-align: center;
-	opacity: 0.8;
+	opacity: 1;
 	background: rgba(0,0,0,0.1);
 	border-radius: 3px 3px 0 0;
 	font-family: Arial,Helvetica,sans-serif;
@@ -89,7 +89,7 @@ perspective effects (not including the modals and the overlay).
 }
 
 .md-content > div {
-	padding: 15px 40px 30px;
+	padding: 15px 3vw 30px;
 	margin: 0;
 	font-weight: 300;
 	font-size: 1.15em;
@@ -109,6 +109,8 @@ perspective effects (not including the modals and the overlay).
 	padding: 5px 0;
 	font-family: Arial,Helvetica,sans-serif;
     font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 1px;
 }
 
 .md-content button {
