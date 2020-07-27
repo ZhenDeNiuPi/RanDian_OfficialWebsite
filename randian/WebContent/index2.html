@@ -134,7 +134,7 @@
 					<span class="content__number">4</span>
 					<h3 class="content__title">产品案例</h3>
 					<h5 class="content__subtitle1" style="transform: matrix(1, 0, 0, 1, 0, 10); opacity: 0;">Product &amp; Case</h5>
-					<h4 class="content__subtitle">目前已成功完成18个软件产品。At present, 18 software products have been successfully completed.</h4>
+					<h4 class="content__subtitle">目前已成功完成18个软件产品。<br/>At present, 18 software products have been successfully completed.</h4>
 					<div class="content__text">
 					<a href="dixin.html">滴信慈善基金会小程序</a><br/>
 					<a href="zhishang.html">至上净化官网</a><br/>
@@ -151,7 +151,7 @@
 					<span class="content__number">5</span>
 					<h3 class="content__title" style="transform: matrix(1, 0, 0, 1, 0, 10); opacity: 0;">联系我们</h3>
 					<h5 class="content__subtitle1">Contact &amp; Us</h5>
-					<h4 class="content__subtitle">欢迎各行各业人士咨询。All walks of life are welcome to consult.</h4>
+					<h4 class="content__subtitle">欢迎各行各业人士咨询。<br/>All walks of life are welcome to consult.</h4>
 					<div class="content__text"><br/>电话&Phone：‭15621166191<br/>邮箱&Email：qdrandian@163.com<br/>
 						<img style="width: 120px" src="img/2wm.png"><br/>
 					</div>
@@ -161,12 +161,12 @@
 					<h4 class="content__subtitle">This is unplanned it really just happens</h4>
 					<div class="content__text">But we're not there yet, so we don't need to worry about it. Now let's put some happy little clouds in here. What the devil. A thin paint will stick to a thick paint. I'm going to mix up a little color. We’ll use Van Dyke Brown, Permanent Red, and a little bit of Prussian Blue. Let's go up in here, and start having some fun The least little bit can do so much. Work on one thing at a time. Don't get carried away - we have plenty of time. Put your feelings into it, your heart, it's your world. These trees are so much fun. I get started on them and I have a hard time stopping.</div>
 				</div> -->
+			</div>
 				<button class="content__close">
 					<svg class="icon icon--longarrow">
 						<use xlink:href="#icon-longarrow"></use>
 					</svg>
 				</button>
-			</div>
 		</main>
 		<script type="text/javascript" src="js/jQuery.js"></script>
 		<script type="text/javascript" src="js/constellation.js"></script>
@@ -174,6 +174,11 @@
 		<script src="js/charming.min.js"></script>
 		<script src="js/TweenMax.min.js"></script>
 		<script src="js/demo2.js"></script>
+		<script>
+			var swidth = document.body.clientWidth;
+			if(swidth>=450)
+				window.location.href='index.html';
+		</script>
 	</header>
 	</body>
 </html>
