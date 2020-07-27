@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>燃点科技官网</title>
 	<link rel="stylesheet" type="text/css" href="css/base2.css" />
+	<link rel="stylesheet" type="text/css" href="css/crowd.css">
 	<script>
 		document.documentElement.className = "js";
 		var supportsCssVars = function() { var e, t = document.createElement("style"); return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e };
@@ -13,7 +14,11 @@
 		</script>
 </head>
 <body class="loading">
-
+	<header>
+        <div>
+            <canvas id="display"></canvas>
+            <div id="blachole"></div>
+        </div>
 		<svg class="hidden">
 			<symbol id="icon-arrow" viewBox="0 0 24 24">
 				<title>arrow</title>
@@ -147,8 +152,9 @@
 					<h3 class="content__title" style="transform: matrix(1, 0, 0, 1, 0, 10); opacity: 0;">联系我们</h3>
 					<h5 class="content__subtitle1">Contact &amp; Us</h5>
 					<h4 class="content__subtitle">欢迎各行各业人士咨询。All walks of life are welcome to consult.</h4>
-					<div class="content__text">电话&Phone：15588995155<br/>邮箱&Email：245883541@qq.com<br/>微信&Wechat：二维码<br/></div>
-				</div>
+					<div class="content__text"><br/>电话&Phone：‭15621166191<br/>邮箱&Email：qdrandian@163.com<br/>
+						<img style="width: 120px" src="img/2wm.png"><br/>
+					</div>
 				<!-- <div class="content__item">
 					<span class="content__number">6</span>
 					<h3 class="content__title">Focus</h3>
@@ -162,9 +168,12 @@
 				</button>
 			</div>
 		</main>
+		<script type="text/javascript" src="js/jQuery.js"></script>
+		<script type="text/javascript" src="js/constellation.js"></script>
 		<script src="js/imagesloaded.pkgd.min.js"></script>
 		<script src="js/charming.min.js"></script>
 		<script src="js/TweenMax.min.js"></script>
 		<script src="js/demo2.js"></script>
+	</header>
 	</body>
 </html>
