@@ -359,6 +359,16 @@
             this.DOM.subtitle1 = this.DOM.el.querySelector('.content__subtitle1');
             this.DOM.text = this.DOM.el.querySelector('.content__text');
             this.DOM.backCtrl = this.DOM.el.parentNode.querySelector('.content__close');
+            this.DOM.backCtrl2 = this.DOM.el.parentNode;
+            this.DOM.as = this.DOM.text.querySelector('.as');
+            if(this.DOM.as!=null){
+            	this.DOM.as.addEventListener('click', event => {
+            		  event.stopPropagation();  // chromium内核
+            		  window.event.cancelBubble = true;  // IE内核
+            	})
+            }else{
+                this.DOM.backCtrl2.addEventListener('click', () => slideshow.hideContent());
+            }
             this.DOM.backCtrl.addEventListener('click', () => slideshow.hideContent());
         }
         show() {
@@ -479,6 +489,37 @@
             this.currentSlide.hideTexts(true);
         }
         hideContent() {
+            if ( !this.isContentOpen || this.isAnimating ) return;
+
+            this.DOM.el.classList.remove('slideshow--previewopen');
+            var imgs = document.getElementsByName("imgs");
+            for(var i=0;i<imgs.length;i++){
+            	imgs[i].style.display= "block";
+            }
+
+            // Hide content.
+            this.contents[this.current].hide();
+
+            TweenMax.to(this.DOM.deco, .8, {
+                ease: Power4.easeInOut,
+                scaleX: 1,
+                scaleY: 1,
+                x: 0,
+                y: 0
+            });
+            // Move in right/left slides.
+            this.prevSlide.moveToPosition({position: -1});
+            this.nextSlide.moveToPosition({position: 1});
+            // Position the current slide.
+            this.currentSlide.moveToPosition({position: 0}).then(() => {
+                allowTilt = true;
+                this.isContentOpen = false;
+            });
+            // Show texts.
+            this.currentSlide.showTexts();
+        }
+
+        hideContent2() {
             if ( !this.isContentOpen || this.isAnimating ) return;
 
             this.DOM.el.classList.remove('slideshow--previewopen');
