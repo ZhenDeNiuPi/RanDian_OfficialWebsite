@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"  class="no-js">
+<head>
+<meta charset="UTF-8">
+<title>青岛燃点网络科技</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/reset.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="shortcut icon" href="../favicon.ico"> 
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<link rel="stylesheet" type="text/css" href="css/crowd2.css">
+<script src="js/modernizr.custom.js"></script>
+</head>
+<body>
+	<header>
+        <div>
+            <canvas id="display"></canvas>
+            <div id="blachole"></div>
+        </div>
+<div id="app"></div>
+
+<div class="md-modal md-effect-11" id="modal">
+	<div class="md-content">
+		<h3>易车商服务平台</h3>
+		<div>
+			<ul>
+				<li><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;该平台面向广大车辆商家，提供主流服务诸如会员管理、订单管理、发票管理、设备管理等等；同时配套车主小程序，拥有购买会员、位置服务、优惠加油、违章代缴等功能。</strong></li>
+				<li><strong></strong></li>
+				<li><strong>合作方:</strong>上海石易电子科技有限公司</li>
+				<li><strong>开发时间:</strong>2020年6月</li>
+				<li><strong>开发周期:</strong>120天</li>
+			</ul>
+			<button class="md-close" onclick="hide()">继续</button>
+		</div>
+	</div>
+</div>
+<img class="content__close" src="img/left.png" onclick="window.history.back()">
+	</header>
+<!-- partial -->
+<script type="text/javascript" src="js/jQuery.js"></script>
+<script type="text/javascript" src="js/constellation.js"></script>
+<script src='js/react.production.min.js'></script>
+<script src='js/react-dom.production.min.js'></script>
+<script src='js/react-transition-group.min.js'></script>
+<script  src="js/ycs_script.js"></script>
+
+		<script src="js/classie.js"></script>
+		<script src="js/modalEffects.js"></script>
+
+		<!-- for the blur effect -->
+		<!-- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill -->
+		<script>
+			// this is important for IEs
+			var polyfilter_scriptpath = '/js/';
+		</script>
+		<script src="js/cssParser.js"></script>
+		<script src="js/css-filters-polyfill.js"></script>
+		<script>
+		$("#modal").addClass("md-show");
+		function hide(){
+			$("#modal").removeClass("md-show");
+		}
+		//.slide--current
+		$(".slide").bind("click",function(){
+			var className = $(this).context.className;
+			if(className.indexOf("slide--current")>-1)
+			$("#modal").addClass("md-show");
+		});
+		</script>
+</body>
+</html>

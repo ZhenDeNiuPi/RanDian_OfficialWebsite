@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en"  class="no-js">
+<head>
+<meta charset="UTF-8">
+<title>青岛燃点网络科技</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/reset.min.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="shortcut icon" href="../favicon.ico"> 
+<link rel="stylesheet" type="text/css" href="css/default.css" />
+<link rel="stylesheet" type="text/css" href="css/component.css" />
+<link rel="stylesheet" type="text/css" href="css/crowd2.css">
+<script src="js/modernizr.custom.js"></script>
+</head>
+<body>
+	<header>
+        <div>
+            <canvas id="display"></canvas>
+            <div id="blachole"></div>
+        </div>
+<div id="app"></div>
+
+<div class="md-modal md-effect-11" id="modal">
+	<div class="md-content">
+		<h3>山建教务管理系统</h3>
+		<div>
+			<ul>
+				<li><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;山东建筑大学学生教务管理系统，是一款全方位，多功能的学生管理系统，主要用于管理学生的个人资料以及学生的日常生活纪律规范，并与山东建筑大学大学生评测系统对接，为大学生评测系统提供每个同学的数据用来进行数据分析。主要的功能模块包括：系统管理、学生信息管理、宿舍管理、公告管理、学院管理、突发事件管理、学风建设管理、学生安全中心、学生督察中心。</strong></li>
+				<li><strong></strong></li>
+				<li><strong>合作方:</strong>山东建筑大学</li>
+				<li><strong>开发时间:</strong>2020年6月</li>
+				<li><strong>开发周期:</strong>120天</li>
+			</ul>
+			<button class="md-close" onclick="hide()">继续</button>
+		</div>
+	</div>
+</div>
+<img class="content__close" src="img/left.png" onclick="window.history.back()">
+	</header>
+<!-- partial -->
+<script type="text/javascript" src="js/jQuery.js"></script>
+<script type="text/javascript" src="js/constellation.js"></script>
+<script src='js/react.production.min.js'></script>
+<script src='js/react-dom.production.min.js'></script>
+<script src='js/react-transition-group.min.js'></script>
+<script  src="js/sjjw_script.js"></script>
+
+		<script src="js/classie.js"></script>
+		<script src="js/modalEffects.js"></script>
+
+		<!-- for the blur effect -->
+		<!-- by @derSchepp https://github.com/Schepp/CSS-Filters-Polyfill -->
+		<script>
+			// this is important for IEs
+			var polyfilter_scriptpath = '/js/';
+		</script>
+		<script src="js/cssParser.js"></script>
+		<script src="js/css-filters-polyfill.js"></script>
+		<script>
+		$("#modal").addClass("md-show");
+		function hide(){
+			$("#modal").removeClass("md-show");
+		}
+		//.slide--current
+		$(".slide").bind("click",function(){
+			var className = $(this).context.className;
+			if(className.indexOf("slide--current")>-1)
+			$("#modal").addClass("md-show");
+		});
+		</script>
+</body>
+</html>
